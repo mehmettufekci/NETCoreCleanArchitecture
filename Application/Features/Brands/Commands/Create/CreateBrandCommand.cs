@@ -37,6 +37,7 @@ public class CreateBrandCommand:IRequest<CreatedBrandResponse>,ITransactionalReq
             Brand brand = _mapper.Map<Brand>(request);
             brand.Id = Guid.NewGuid();
 
+            //Transaction hatası alması için yazıldı 
             //Brand brand2 = _mapper.Map<Brand>(request);
             //brand2.Id = Guid.NewGuid();
 
